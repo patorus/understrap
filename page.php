@@ -44,6 +44,18 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 				<?php endwhile; // end of the loop. ?>
 
+
+                <?php
+                foreach (carbon_get_the_post_meta('page_content') as $section) {
+                    $section['_type'] = ltrim($section['_type'], '_');
+                    if (file_exists(__DIR__ . '/sections/' . $section['_type'] . '.php')) {
+                        include __DIR__ . '/sections/' . $section['_type'] . '.php';
+                    } else {
+                        echo "Error: section " . $section['_type'] . 'not found';
+                    }
+                }
+                ?>
+
 			</main><!-- #main -->
 
 			<!-- Do the right sidebar check -->
