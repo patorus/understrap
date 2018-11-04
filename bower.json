@@ -1,9 +1,9 @@
 {
-  "name": "understrap",
-  "version": "0.9.1",
-  "homepage": "http://understrap.com",
+  "name": "understrap_ext",
+  "version": "0.8.8",
+  "homepage": "https://github.com/patorus/understrap",
   "authors": [
-    "Holger Koenemann <office@holgerkoenemann.de>"
+    "Patorus <info@patorus.com>"
   ],
   "description": "UnderStrap is a Bootstrap and underscores based WordPress theme framework.",
   "moduleType": "globals",
@@ -25,7 +25,7 @@
   ],
   "dependencies": {
   },
-  "_source": "https://github.com/holger1411/understrap.git",
-  "_target": "~0.9.0",
+  "_source": "https://github.com/patorus/understrap.git",
+  "_target": "~0.8.8",
   "_originalSource": "understrap"
 }

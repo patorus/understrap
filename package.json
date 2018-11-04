@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/holger1411/understrap.git"
+    "url": "https://github.com/patorus/understrap.git"
   },
   "keywords": [
     "wordpress",
@@ -20,12 +20,12 @@
     "bootstrap",
     "underscores"
   ],
-  "author": "Holger Koenemann",
+  "author": "Patorus",
   "license": "GPL-2.0",
   "bugs": {
-    "url": "https://github.com/holger1411/understrap/issues"
+    "url": "https://github.com/patorus/understrap.git/issues"
   },
-  "homepage": "https://understrap.com",
+  "homepage": "https://github.com/patorus/understrap.git",
   "dependencies": {
     "bootstrap": "4.3.1",
     "browser-sync": "^2.26.3",
