@@ -130,3 +130,24 @@ function understrap_mobile_web_app_meta() {
 	echo '<meta name="apple-mobile-web-app-title" content="' . esc_attr( get_bloginfo( 'name' ) ) . ' - ' . esc_attr( get_bloginfo( 'description' ) ) . '">' . "\n";
 }
 add_action( 'wp_head', 'understrap_mobile_web_app_meta' );
+
+function get_image_info( $attachment_id, $custom = null ) {
+    $attachment = get_post( $attachment_id );
+
+    $return = [
+        'full'        => wp_get_attachment_image_src( $attachment->ID, 'full', false )[0],
+        'alt'         => get_post_meta( $attachment->ID, '_wp_attachment_image_alt', true ),
+        'caption'     => $attachment->post_excerpt,
+        'description' => $attachment->post_content,
+        'permalink'   => get_permalink( $attachment->ID ),
+        'src'         => $attachment->guid,
+        'title'       => $attachment->post_title
+    ];
+
+    if($custom !== null){
+        $custom_imagesize = wp_get_attachment_image_src( $attachment->ID, $custom, false )[0];
+        $return[$custom] = (strlen($custom_imagesize) ? $custom_imagesize : $return['full']);
+    }
+
+    return $return;
+}

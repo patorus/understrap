@@ -10,14 +10,14 @@ Container::make('post_meta', 'Page Content')
         Field::make('complex', 'page_content', 'Inhalte')
             /*----------------------------.
             |                             |
-            |   J u m b o t r o n         |
+            |   H E R O                   |
             |                             |
             '----------------------------*/
-            ->add_fields('jumbotron', [
-                Field::make('complex', 'jumbotron_items', 'Stichpunkte')
-                    ->add_fields('stichpunkte', [
-                        Field::make('text', 'jumbotron_item_text', 'Text'),
-                    ])
+            ->add_fields('hero', [
+                Field::make('text', 'hero_headline', 'Headline'),
+                Field::make('text', 'hero_subline', 'Sub-Headline'),
+                Field::make('text', 'hero_cta_text', 'CTA Button Text'),
+                Field::make('image', 'hero_image', 'Image' ),
             ])
     ]);
 
